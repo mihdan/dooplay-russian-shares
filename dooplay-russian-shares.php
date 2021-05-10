@@ -1,10 +1,24 @@
 <?php
 /**
  * Plugin Name: Dooplay Russian Shares
+ * Plugin URI: https://github.com/mihdan/dooplay-russian-shares
  * Author: Mikhail Kobzarev
- * Version: 1.0.0
+ * Author URI: https://www.kobzarev.com
+ * Description: Плагин отключает шеры от Dooplay и добавляет такие же, но для русского сегмента.
+ * Version: 1.0.1
  * GitHub Plugin URI: https://github.com/mihdan/dooplay-russian-shares
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit();
+}
+
+add_action(
+	'after_setup_theme',
+	function () {
+		define( 'DOO_THEME_SOCIAL_SHARE', false );
+	}
+);
 
 function dooplay_child_theme_social_share( $id ) {
 	// Main data
@@ -47,5 +61,23 @@ add_filter(
 		}
 
 		return $content;
+	}
+);
+
+add_action(
+	'wp_head',
+	function () {
+		?>
+		<style>
+            .dt_social_sbox {
+                padding: 20px 0 !important;
+                background-color: transparent !important;
+                border: 0 !important;
+            }
+            .dt_social_single span { padding-left: 0 !important; }
+            .dt_social.vkontakte { background-color: #45668e; }
+            .dt_social.odnoklassniki { background-color: #ed812b; }
+		</style>
+		<?php
 	}
 );
