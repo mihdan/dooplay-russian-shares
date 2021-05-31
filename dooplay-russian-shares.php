@@ -55,7 +55,7 @@ add_filter(
 	'the_content',
 	function ( $content ) {
 
-		if ( is_singular() && ! is_feed() ) {
+		if ( is_singular() && ! is_feed() && ! is_singular( 'mihdan_yandex_turbo_feed' ) ) {
 			$post = get_post();
 			return $content . dooplay_child_theme_social_share( $post->ID );
 		}
