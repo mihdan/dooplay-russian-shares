@@ -5,7 +5,7 @@
  * Author: Mikhail Kobzarev
  * Author URI: https://www.kobzarev.com
  * Description: Плагин отключает шеры от Dooplay и добавляет такие же, но для русского сегмента.
- * Version: 1.0.2
+ * Version: 1.0.3
  * GitHub Plugin URI: https://github.com/mihdan/dooplay-russian-shares
  */
 
