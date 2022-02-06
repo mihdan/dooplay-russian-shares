@@ -26,7 +26,7 @@ function dooplay_child_theme_social_share( $id ) {
 	$count = ($count >= 1) ? doo_comvert_number($count) : '0';
 	$image = get_the_post_thumbnail_url( $id,'large' );
 	$slink = get_permalink($id);
-	$title = get_the_title($id);
+	$title = rawurlencode( get_the_title( $id ) );
 	// Conpose view
 	$out = "<div class='sbox dt_social_sbox'><div class='dt_social_single'>";
 	$out.= "<span>". __d('Shared') ."<b id='social_count'>{$count}</b></span>";
