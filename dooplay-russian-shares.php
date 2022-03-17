@@ -78,6 +78,7 @@ add_action(
             .dt_social_single span { padding-left: 0 !important; }
             .dt_social.vkontakte { background-color: #45668e; }
             .dt_social.odnoklassniki { background-color: #ed812b; }
+            .dt_social.telegram { background-color: #0088cc; }
 		</style>
 		<?php
 	}
